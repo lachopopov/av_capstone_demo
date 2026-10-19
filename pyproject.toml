@@ -1,0 +1,17 @@
+# Standalone dependency manifest for the Streamlit demo.
+[project]
+# Name and version identify this small deployment package.
+name = "av-capstone-demo"
+version = "0.1.0"
+# Use the Python 3.12 version tested by the existing project.
+requires-python = ">=3.12,<3.13"
+# Pin the UI's existing project dependency versions.
+dependencies = [
+  "streamlit==1.66.0",
+  "httpx==0.28.1",
+  "python-dotenv==1.2.4",
+]
+
+# Run the app directly; do not install this repository as a package.
+[tool.uv]
+package = false
